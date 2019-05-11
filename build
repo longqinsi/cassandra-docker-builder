@@ -1,0 +1,5 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+pushd "$DIR"
+docker build --build-arg http_proxy="" --build-arg https_proxy="" -t cassandra .
+popd
